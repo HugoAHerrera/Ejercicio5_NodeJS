@@ -1,0 +1,17 @@
+//- views/layout.jade
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      h1 Tienda de Ropa
+      if session && session.loggedIn
+        a(href='/logout') Cerrar sesión
+      else
+        a(href='/') Iniciar sesión
+      a(href='/restringida') Página restringida
+    block content
+    footer
+      p &copy; 2024 Tienda de Ropa

@@ -1,0 +1,11 @@
+//- views/tienda.jade
+extends layout
+
+block content
+  h2 Bienvenido a la Tienda
+  ul
+    each item in items
+      li
+        img(src=item.image, alt=item.nombre)
+        h3= item.nombre
+        p Precio: #{item.precio}

@@ -1,0 +1,11 @@
+//- views/login.jade
+extends layout
+
+block content
+  h2 Iniciar Sesión
+  form(action='/login', method='post')
+    label(for='username') Usuario
+    input(type='text', id='username', name='username', required=true)
+    label(for='password') Contraseña
+    input(type='password', id='password', name='password', required=true)
+    button(type='submit') Iniciar sesión
